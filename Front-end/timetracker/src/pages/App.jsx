@@ -1,10 +1,16 @@
 import { Routes, Route } from "react-router-dom"
+import Landing from "./Landing"
+import Login from "./Login"
+import Signup from "./Signup"
 import Home from "./Home"
 
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Landing />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/home" element={<Home />} />
     </Routes>
   )
 }

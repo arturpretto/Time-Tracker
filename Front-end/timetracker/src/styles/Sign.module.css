@@ -1,0 +1,83 @@
+.background {
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginBox {
+    width: 30%;
+    height: 60dvh;
+    background-color: #ffffff18;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signupBox {
+    width: 30%;
+    height: 70dvh;
+    background-color: #ffffff18;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80%;
+    width: 80%;
+}
+
+.signInput {
+    border: 1px solid rgb(87, 86, 86);
+    height: 20px;
+    background-color: rgb(63, 62, 62);
+    border-radius: 10px;
+    padding: 1rem;
+    outline: none;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.9);
+}
+
+.signInput:hover {
+    border: 0.5px solid var(--primary-color);
+    transition: 0.5s;
+}
+
+.signInput:focus {
+    border: 0.5px solid var(--primary-color);
+    transition: 0.5s;
+}
+
+.signInput::placeholder {
+    color: #fff;
+}
+
+.formBtn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.9);
+}
+
+.formBtn:hover {
+    background-color: var(--primary-hover);
+    transition: 0.2s;
+}
+
+a {
+    color: #7eb1e0;
+    cursor: pointer;
+}
