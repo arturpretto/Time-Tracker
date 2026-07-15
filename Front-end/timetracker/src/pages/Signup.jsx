@@ -12,7 +12,7 @@ export default function Landing() {
                     <input type="text" placeholder="Nome..." className={style.signInput} />
                     <input type="text" placeholder="E-mail..." className={style.signInput} />
                     <input type="password" placeholder="Senha..." className={style.signInput} />
-                    <button type="submit" className={style.formBtn} onClick={() => navigate("/")}>CADASTRAR</button>
+                    <button type="submit" className={style.formBtn} onClick={() => navigate("/home")}>CADASTRAR</button>
                     <p>Já possui conta? <Link to="/login">Entrar</Link></p>
                 </form>
             </div>
