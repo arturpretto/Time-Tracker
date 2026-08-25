@@ -6,7 +6,7 @@ export default function Landing() {
         <div className={style.background}>
             <nav className={style.nav}>
                 <div className={style.title}>
-                    <h1 className={style.titleText}>BATE PONTO TELECON</h1>
+                    <h1 className={style.titleText}>TIME TRACKER TELECAS</h1>
                 </div>
                 <div className={style.buttons}>
                     <Link to="/login"><button type="button" className={style.loginBtn}>ENTRAR</button></Link>

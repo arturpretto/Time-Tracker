@@ -15,7 +15,7 @@ export default function Login() {
             return
         }
 
-        const response = await fetch("http://localhost:3000/users", {
+        const response = await fetch("http://localhost:3000/users/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -27,9 +27,14 @@ export default function Login() {
         })
 
         const data = await response.json()
-        localStorage.setItem("userId", data.id)
 
-        navigate("/home")
+        if (data.status === 200 && data.userFound) {
+            localStorage.setItem("userId", data.userFound.id)
+            navigate("/home")
+        } else {
+            alert("Email ou senha incorretos")
+            navigate("/login")
+        }
     }
 
     return (

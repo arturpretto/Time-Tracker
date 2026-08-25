@@ -36,9 +36,9 @@ app.post('/users/login', async (req, res) => {
         const userFound = user.find(u => u.email === email && u.password === password);
 
         if (userFound) {
-            res.status(200).json(userFound);
+            res.status(200).json({ status: 200, message: "Logado", userFound });
         } else {
-            res.status(404).json({ message: "Usuário não encontrado" });
+            res.status(404).json({ status: 404, message: "Email ou senha incorretos" });
         }
     } catch (err) {
         console.log(err);
