@@ -9,7 +9,10 @@ export default function Nav() {
         <header className={style.header}>
             <div className={style.homeContainer}>
                 <House />
-                <h3>Home</h3>
+                <h3>Início</h3>
+            </div>
+            <div className={style.pointsContainer}>
+                <h3>Pontos</h3>
             </div>
         </header>
     )

@@ -14,7 +14,7 @@ export default function Landing() {
                 </div>
             </nav>
             <div className={style.logoContainer}>
-                <img src="/telecon.jpg" alt="" className={style.logo} />
+                <img src="/telecon.png" alt="Telecon" className={style.logo} />
             </div>
         </div>
     );
