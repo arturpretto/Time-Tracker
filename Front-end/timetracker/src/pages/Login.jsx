@@ -35,6 +35,8 @@ export default function Login() {
             alert("Email ou senha incorretos")
             navigate("/login")
         }
+
+        console.log(data)
     }
 
     return (
