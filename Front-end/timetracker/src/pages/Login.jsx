@@ -15,28 +15,30 @@ export default function Login() {
             return
         }
 
-        const response = await fetch("http://localhost:3000/users/login", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                email: email.current.value,
-                password: password.current.value
+        try {
+            const response = await fetch("http://localhost:3000/users/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    email: email.current.value,
+                    password: password.current.value
+                })
             })
-        })
 
-        const data = await response.json()
+            const data = await response.json()
 
-        if (data.status === 200 && data.userFound) {
-            localStorage.setItem("userId", data.userFound.id)
-            navigate("/home")
-        } else {
-            alert("Email ou senha incorretos")
-            navigate("/login")
+            if (response.ok && data.user.id) {
+                localStorage.setItem("userId", data.user.id)
+                navigate("/home")
+            } else {
+                alert(data.message || "Email ou senha incorretos")
+            }
+        } catch (err) {
+            console.error(err)
+            alert("Erro de conexão com o servidor")
         }
-
-        console.log(data)
     }
 
     return (

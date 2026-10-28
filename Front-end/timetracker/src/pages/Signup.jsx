@@ -16,23 +16,30 @@ export default function Landing() {
             return
         }
 
-        const response = await fetch("http://localhost:3000/users", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                id: Math.random() * 10000,
-                nome: nome.current.value,
-                email: email.current.value,
-                password: password.current.value
+        try {
+            const response = await fetch("http://localhost:3000/users", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    nome: nome.current.value,
+                    email: email.current.value,
+                    password: password.current.value
+                })
             })
-        })
 
-        const data = await response.json()
-        console.log(data)
+            const data = await response.json()
 
-        navigate("/login")
+            if (response.ok) {
+                navigate("/login")
+            } else {
+                alert(data.message || "Não foi possível criar a conta")
+            }
+        } catch (err) {
+            console.error(err)
+            alert("Erro de conexão com o servidor")
+        }
     }
 
     return (

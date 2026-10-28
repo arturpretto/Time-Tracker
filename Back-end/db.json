@@ -1,4 +1,10 @@
 {
-  "users": [],
-  "tasks": []
+  "users": [
+    {
+      "id": "7ca0d747-4b8c-4113-8fdf-164b2cdce8cb",
+      "nome": "artur",
+      "email": "aap051059@gmail.com",
+      "password": "1234"
+    }
+  ]
 }
